@@ -65,6 +65,10 @@ class UrlLinkifier extends Linkifier {
               if (options.removeWww) {
                 url = url.replaceFirst(RegExp(r'www\.'), '');
               }
+              
+              if (options.urlText != null && options.urlText != '') {
+                originText = options.urlText!;
+              }
 
               list.add(UrlElement(
                 originalUrl,
